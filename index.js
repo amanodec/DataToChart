@@ -104,8 +104,8 @@ form.addEventListener("submit", function (event) {
         },
       },
     },
-  });
-
+  }); 
+  //   Destroying the chart and clearing the map
   document.querySelector(".newChart").addEventListener("click", function () {
     myChart.destroy();
     map1.clear();
@@ -118,6 +118,7 @@ form.addEventListener("submit", function (event) {
   const form2 = document.querySelector(".form2");
   const dateInput2 = form2.querySelector("#date2");
 
+  //   Adding event listener to the form2
   form2.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
     const dateValue2 = dateInput2.value; // Get date input value
@@ -127,6 +128,7 @@ form.addEventListener("submit", function (event) {
 
     let arr = [0, 0, 0, 0, 0, 0, 0, 0];
 
+    // Finding the number of meals ordered in different time slots
     for (let item of data) {
       let time = item.schedule_time.substring(12);
       let date = item.schedule_time.substring(0, 10);
@@ -192,7 +194,7 @@ form.addEventListener("submit", function (event) {
         },
       },
     });
-
+    // Destroying the chart
     document.querySelector(".newChart2").addEventListener("click", function () {
       myChart2.destroy();
       arr = [];
