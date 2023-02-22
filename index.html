@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Data to Chart</title>
+  </head>
+  <body>
+    <h1>
+      Bar Chart to display the number of orders placed on respective days, for a
+      given item_date
+    </h1>
+    <div class="form-container">
+      <form class="form1">
+        <label for="date">Date:</label>
+        <input
+          class="formInput"
+          type="date"
+          id="date"
+          name="date"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+        />
+        <br />
+        <br />
+        <button type="submit" class="submitBtn btn cube cube-hover">
+          <div class="bg-top">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="bg-right">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="bg">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="text">Submit</div>
+        </button>
+      </form>
+      <button type="button" class="chartBtn newChart btn cube cube-hover">
+        <div class="bg-top">
+          <div class="bg-inner"></div>
+        </div>
+        <div class="bg-right">
+          <div class="bg-inner"></div>
+        </div>
+        <div class="bg">
+          <div class="bg-inner"></div>
+        </div>
+        <div class="text">New Chart</div>
+      </button>
+    </div>
+
+    <div class="chartBox"><canvas id="myChart"></canvas></div>
+    <br />
+    <br />
+    <h1>Bar Chart to display the specific timings when the item was ordered</h1>
+    <h3>Select a date from the above Bar Chart</h3>
+    <div class="form-container">
+      <form class="form2">
+        <label for="date">Date:</label>
+        <input
+          class="formInput"
+          type="date"
+          id="date2"
+          name="date"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+        />
+        <br />
+        <br />
+        <button
+          type="submit"
+          id="newChart2"
+          class="submitBtn btn cube cube-hover"
+        >
+          <div class="bg-top">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="bg-right">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="bg">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="text">Submit</div>
+        </button>
+      </form>
+      <button class="newChart2 chartBtn btn cube cube-hover">
+        <div class="bg-top">
+          <div class="bg-inner"></div>
+        </div>
+        <div class="bg-right">
+          <div class="bg-inner"></div>
+        </div>
+        <div class="bg">
+          <div class="bg-inner"></div>
+        </div>
+        <div class="text">New Chart</div>
+      </button>
+    </div>
+
+    <div class="chartBox"><canvas id="myChart2"></canvas></div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
